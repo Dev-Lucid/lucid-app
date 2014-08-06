@@ -1,6 +1,6 @@
 <?php
 global $lucid;
-include(__DIR__.'/../lib/lucid-router/lib/php/lucid.php');
+include(__DIR__.'/../../../lib/lucid-router/lib/php/lucid.php');
 
 lucid::init();
 
