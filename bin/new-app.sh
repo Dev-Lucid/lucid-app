@@ -10,6 +10,8 @@ if [ ! -d "$1" ]; then
   mkdir apps/$1
 fi
 
+mkdir apps/$1/var;
+mkdir apps/$1/var/log;
 mkdir apps/$1/etc;
 mkdir apps/$1/bin;
 mkdir apps/$1/lib;

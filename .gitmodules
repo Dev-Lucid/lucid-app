@@ -16,3 +16,6 @@
 [submodule "lib/jquery-hashchange"]
 	path = lib/jquery-hashchange
 	url = git@github.com:cowboy/jquery-hashchange.git
+[submodule "lib/lucid-orm"]
+	path = lib/lucid-orm
+	url = git@github.com:Dev-Lucid/lucid-orm.git
