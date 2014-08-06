@@ -1,0 +1,18 @@
+[submodule "lib/lucid-router"]
+	path = lib/lucid-router
+	url = git@github.com:Dev-Lucid/lucid-router.git
+[submodule "lib/BootstrapConstructor"]
+	path = lib/BootstrapConstructor
+	url = git@github.com:Dev-Lucid/BootstrapConstructor.git
+[submodule "lib/less.php"]
+	path = lib/less.php
+	url = git@github.com:oyejorge/less.php.git
+[submodule "lib/minifier-php"]
+	path = lib/minifier-php
+	url = git@github.com:0x6C77/minifier-php.git
+[submodule "lib/bootstrap"]
+	path = lib/bootstrap
+	url = git@github.com:twbs/bootstrap.git
+[submodule "lib/jquery-hashchange"]
+	path = lib/jquery-hashchange
+	url = git@github.com:cowboy/jquery-hashchange.git
