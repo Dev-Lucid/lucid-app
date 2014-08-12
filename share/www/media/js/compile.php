@@ -1,27 +1,6 @@
 <?php
-
-$files = array(
-    __DIR__.'/jquery.js', 
-    __DIR__.'/../../../../../lib/bootstrap/js/tooltip.js',
-	__DIR__.'/../../../../../lib/bootstrap/js/affix.js',
-	__DIR__.'/../../../../../lib/bootstrap/js/alert.js',
-	__DIR__.'/../../../../../lib/bootstrap/js/button.js',
-	__DIR__.'/../../../../../lib/bootstrap/js/carousel.js',
-	__DIR__.'/../../../../../lib/bootstrap/js/collapse.js',
-	__DIR__.'/../../../../../lib/bootstrap/js/dropdown.js',
-	__DIR__.'/../../../../../lib/bootstrap/js/modal.js',
-	__DIR__.'/../../../../../lib/bootstrap/js/popover.js',
-	__DIR__.'/../../../../../lib/bootstrap/js/scrollspy.js',
-	__DIR__.'/../../../../../lib/bootstrap/js/tab.js',
-    __DIR__.'/../../../../../lib/bootstrap/js/transition.js',    
-    __DIR__.'/../../../../../lib/lucid-router/lib/js/lucid.js', 
-    __DIR__.'/../../../../../lib/BootstrapConstructor/lib/js/bsc.js', 
-    __DIR__.'/../../../../../lib/BootstrapConstructor/lib/js/bsc.form.js', 
-    __DIR__.'/../../../../../lib/BootstrapConstructor/lib/js/bsc.widget.js', 
-    __DIR__.'/../../../../../lib/BootstrapConstructor/lib/js/bsc.widget.dataTable.js', 
-    __DIR__.'/../../../../../lib/BootstrapConstructor/lib/js/bsc.widget.effect.js', 
-    __DIR__.'/customizations.js', 
-);
+global $files;
+include(__DIR__.'/../../../etc/js.php');
     
 $offset = 60 * 60 * 24 * 7; // Cache for 1 weeks
 /*

@@ -2,20 +2,12 @@
 header("Content-Type: text/css");
 header("X-Content-Type-Options: nosniff"); 
 
+global $less;
 include(__DIR__.'/../../../../../lib/less.php/lessc.inc.php');
+include(__DIR__.'/../../../etc/less.php');
 
-$less_files = array(__DIR__.'/customizations.less' => '/' );
-$options = array( 
-	'cache_dir' => '/tmp',
-	'import_dirs'=>[
-		__DIR__.'/../../../../../lib/bootstrap/less/'=>'/',
-		__DIR__.'/../../../../../lib/BootstrapConstructor/lib/less/'=>'/',
-	],
-	'compress'=>true 
-);
-$css_file_name = Less_Cache::Get( $less_files, $options );
-$compiled = file_get_contents( '/tmp/'.$css_file_name );
+$css_file_name = Less_Cache::Get( $less['files'], $less );
+$compiled = file_get_contents($less['cache_dir'].$css_file_name );
 
 echo($compiled);
-
 ?>
