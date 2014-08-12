@@ -16,6 +16,8 @@ mkdir $DIR/../apps/$1/var;
 mkdir $DIR/../apps/$1/var/log;
 mkdir $DIR/../apps/$1/var/cache;
 mkdir $DIR/../apps/$1/etc;
+mkdir $DIR/../apps/$1/etc/ssh;
+mkdir $DIR/../apps/$1/etc/apache;
 mkdir $DIR/../apps/$1/bin;
 mkdir $DIR/../apps/$1/lib;
 mkdir $DIR/../apps/$1/db;
@@ -59,6 +61,11 @@ cp $DIR/../share/www/controllers/static_content/views/login.php $DIR/../apps/$1/
 echo "Building database and models..."
 cp $DIR/../share/etc/router.php $DIR/../apps/$1/etc/;
 cp $DIR/../share/etc/orm.php $DIR/../apps/$1/etc/;
+cp $DIR/../share/etc/stages.php $DIR/../apps/$1/etc/;
+cp $DIR/../share/etc/ssh/server.private $DIR/../apps/$1/etc/ssh/;
+cp $DIR/../share/etc/ssh/server.public $DIR/../apps/$1/etc/ssh/;
+cp $DIR/../share/etc/apache/httpd-ssl.conf $DIR/../apps/$1/etc/apache/;
+cp $DIR/../share/etc/apache/httpd-nossl.conf $DIR/../apps/$1/etc/apache/;
 cp $DIR/../share/db/build.sql $DIR/../apps/$1/db/;
 sqlite3 $DIR/../apps/$1/db/development.db ".read $DIR/../share/db/build.sql";
 $DIR/../bin/build-models.php $1;
