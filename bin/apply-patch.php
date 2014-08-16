@@ -3,7 +3,7 @@
 
 if(count($argv) < 3)
 {
-	exit("You must pass two parameters: the name of the web app (e.g. testing.webapp), and the patch path relative to apps/[app name]/db/patches/ (e.g. 00001.sql)");
+	exit("You must pass two parameters: the name of the web app (e.g. mytestapp), and the patch path relative to apps/[app name]/db/patches/ (e.g. 00001.sql)");
 }
 
 class empty_class{

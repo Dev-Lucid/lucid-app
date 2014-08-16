@@ -51,8 +51,14 @@ cp $DIR/../share/www/media/less/customizations.less $DIR/../apps/$1/www/media/le
 
 
 echo "Copying static content..."
-#wget http://code.jquery.com/jquery-1.11.1.min.js -O $DIR/../apps/$1/www/media/js/jquery.js;
-cp ~/jquery.js $DIR/../apps/$1/www/media/js/jquery.js;
+if [ -f ~/jquery.js ];
+then
+	echo "Local jQuery copy exists, copying over"
+   cp ~/jquery.js $DIR/../apps/$1/www/media/js/jquery.js;
+else
+	echo "Downloading jQuery from server"
+   wget http://code.jquery.com/jquery-1.11.1.min.js -O $DIR/../apps/$1/www/media/js/jquery.js;
+fi
 cp $DIR/../share/www/controllers/static_content/views/index.php $DIR/../apps/$1/www/controllers/static_content/views/;
 cp $DIR/../share/www/controllers/static_content/views/about.php $DIR/../apps/$1/www/controllers/static_content/views/;
 cp $DIR/../share/www/controllers/static_content/views/login.php $DIR/../apps/$1/www/controllers/static_content/views/;

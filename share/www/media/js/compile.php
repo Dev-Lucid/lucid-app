@@ -3,8 +3,9 @@ global $files;
 include(__DIR__.'/../../../etc/js.php');
     
 $offset = 60 * 60 * 24 * 7; // Cache for 1 weeks
-/*
 $modified = 0;
+/*
+
 
 foreach($files as $file) {        
     $age = filemtime($file);

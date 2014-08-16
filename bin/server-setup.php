@@ -3,7 +3,7 @@
 
 if(count($argv) < 3)
 {
-	echo("You must pass at least two parameters: the name of the web app (e.g. testing.webapp), and the stage to setup (e.g. qa, production).\n");
+	echo("You must pass at least two parameters: the name of the web app (e.g. mytestapp), and the stage to setup (e.g. qa, production).\n");
 	exit();
 }
 

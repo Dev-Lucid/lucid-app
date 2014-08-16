@@ -3,7 +3,7 @@
 
 if(count($argv) < 2)
 {
-	exit("You must pass one parameter: the name of the web app (e.g. testing.webapp)");
+	exit("You must pass one parameter: the name of the web app (e.g. mytestapp)");
 }
 
 class empty_class{
