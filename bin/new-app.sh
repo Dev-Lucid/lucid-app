@@ -26,6 +26,8 @@ mkdir $DIR/../apps/$1/db/models/base;
 mkdir $DIR/../apps/$1/db/patches;
 mkdir $DIR/../apps/$1/www;
 mkdir $DIR/../apps/$1/www/controllers/;
+mkdir $DIR/../apps/$1/www/controllers/users;
+mkdir $DIR/../apps/$1/www/controllers/authentication;
 mkdir $DIR/../apps/$1/www/controllers/static_content;
 mkdir $DIR/../apps/$1/www/controllers/static_content/views;
 mkdir $DIR/../apps/$1/www/media;
@@ -41,13 +43,14 @@ chmod 777 $DIR/../apps/$1/bin/logs.sh;
 
 echo "Copying basic template, app loader, js/css compilers..."
 cp $DIR/../share/www/app.php $DIR/../apps/$1/www/;
-cp $DIR/../share/www/index.php $DIR/../apps/$1/www/;
+cat $DIR/../share/www/index.php | sed 's,{appname},'"$1"',g' > $DIR/../apps/$1/www/index.php
 cp $DIR/../share/etc/js.php $DIR/../apps/$1/etc/;
 cp $DIR/../share/www/media/js/compile.php $DIR/../apps/$1/www/media/js/;
 cp $DIR/../share/www/media/js/customizations.js $DIR/../apps/$1/www/media/js/;
 cp $DIR/../share/etc/less.php $DIR/../apps/$1/etc/;
 cp $DIR/../share/www/media/less/compile.php $DIR/../apps/$1/www/media/less/;
 cp $DIR/../share/www/media/less/customizations.less $DIR/../apps/$1/www/media/less/;
+cp $DIR/../share/etc/html.php $DIR/../apps/$1/etc/;
 
 
 echo "Copying static content..."
@@ -61,8 +64,10 @@ else
 fi
 cp $DIR/../share/www/controllers/static_content/views/index.php $DIR/../apps/$1/www/controllers/static_content/views/;
 cp $DIR/../share/www/controllers/static_content/views/about.php $DIR/../apps/$1/www/controllers/static_content/views/;
+cp $DIR/../share/www/controllers/static_content/views/table.php $DIR/../apps/$1/www/controllers/static_content/views/;
 cp $DIR/../share/www/controllers/static_content/views/login.php $DIR/../apps/$1/www/controllers/static_content/views/;
-
+cp $DIR/../share/www/controllers/users/users.php $DIR/../apps/$1/www/controllers/users/;
+cp $DIR/../share/www/controllers/authentication/authentication.php $DIR/../apps/$1/www/controllers/authentication/;
 
 echo "Building database and models..."
 cp $DIR/../share/etc/router.php $DIR/../apps/$1/etc/;
@@ -76,5 +81,6 @@ cp $DIR/../share/db/build.sql $DIR/../apps/$1/db/;
 sqlite3 $DIR/../apps/$1/db/development.db ".read $DIR/../share/db/build.sql";
 $DIR/../bin/build-models.php $1;
 echo "*.log" > $DIR/../apps/$1/var/log/.gitignore
+echo "*" > $DIR/../apps/$1/var/cache/.gitignore
 
 echo "Done. To run this webapp, start.sh $1"

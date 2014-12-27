@@ -19,3 +19,6 @@
 [submodule "lib/lucid-orm"]
 	path = lib/lucid-orm
 	url = git@github.com:Dev-Lucid/lucid-orm.git
+[submodule "lib/lucid-html"]
+	path = lib/lucid-html
+	url = git@github.com:Dev-Lucid/lucid-html.git
