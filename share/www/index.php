@@ -7,7 +7,8 @@
 		<title>Bootstrap 101 Template</title>
 
 		<!-- Bootstrap -->
-		<link href="/media/less/compile.php" rel="stylesheet">
+		<link href="/media/less/compile.php" rel="stylesheet" />
+		<link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.1/slate/bootstrap.min.css" rel="stylesheet" />
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -27,14 +28,14 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#!static_content/index">{appname}</a>
+					<a class="navbar-brand" href="#!static_content/index">mytestapp</a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav" id="nav1">
 						<li><a href="#!static_content/about">About Us</a></li>
-						<li><a href="#!static_content/login">Login</a></li>
+						<li><a href="#!authentication/login">Login</a></li>
 					</ul>
 					
 				</div><!-- /.navbar-collapse -->

@@ -22,3 +22,6 @@
 [submodule "lib/lucid-html"]
 	path = lib/lucid-html
 	url = git@github.com:Dev-Lucid/lucid-html.git
+[submodule "lib/lucid-ruleset"]
+	path = lib/lucid-ruleset
+	url = git@github.com:Dev-Lucid/lucid-ruleset.git

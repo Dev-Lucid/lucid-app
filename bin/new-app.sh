@@ -27,7 +27,9 @@ mkdir $DIR/../apps/$1/db/patches;
 mkdir $DIR/../apps/$1/www;
 mkdir $DIR/../apps/$1/www/controllers/;
 mkdir $DIR/../apps/$1/www/controllers/users;
+mkdir $DIR/../apps/$1/www/controllers/users/views;
 mkdir $DIR/../apps/$1/www/controllers/authentication;
+mkdir $DIR/../apps/$1/www/controllers/authentication/views;
 mkdir $DIR/../apps/$1/www/controllers/static_content;
 mkdir $DIR/../apps/$1/www/controllers/static_content/views;
 mkdir $DIR/../apps/$1/www/media;
@@ -51,6 +53,7 @@ cp $DIR/../share/etc/less.php $DIR/../apps/$1/etc/;
 cp $DIR/../share/www/media/less/compile.php $DIR/../apps/$1/www/media/less/;
 cp $DIR/../share/www/media/less/customizations.less $DIR/../apps/$1/www/media/less/;
 cp $DIR/../share/etc/html.php $DIR/../apps/$1/etc/;
+cp $DIR/../share/etc/ruleset.php $DIR/../apps/$1/etc/;
 
 
 echo "Copying static content..."
@@ -65,9 +68,9 @@ fi
 cp $DIR/../share/www/controllers/static_content/views/index.php $DIR/../apps/$1/www/controllers/static_content/views/;
 cp $DIR/../share/www/controllers/static_content/views/about.php $DIR/../apps/$1/www/controllers/static_content/views/;
 cp $DIR/../share/www/controllers/static_content/views/table.php $DIR/../apps/$1/www/controllers/static_content/views/;
-cp $DIR/../share/www/controllers/static_content/views/login.php $DIR/../apps/$1/www/controllers/static_content/views/;
 cp $DIR/../share/www/controllers/users/users.php $DIR/../apps/$1/www/controllers/users/;
 cp $DIR/../share/www/controllers/authentication/authentication.php $DIR/../apps/$1/www/controllers/authentication/;
+cp $DIR/../share/www/controllers/authentication/views/login.php $DIR/../apps/$1/www/controllers/authentication/views/;
 
 echo "Building database and models..."
 cp $DIR/../share/etc/router.php $DIR/../apps/$1/etc/;

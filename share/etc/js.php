@@ -22,6 +22,7 @@ $files = array(
     __DIR__.'/../../../lib/BootstrapConstructor/lib/js/bsc.widget.dataTable.js', 
     __DIR__.'/../../../lib/BootstrapConstructor/lib/js/bsc.effects.js', 
     __DIR__.'/../../../lib/lucid-html/lib/js/lucid.html.js',
+    __DIR__.'/../../../lib/lucid-ruleset/lib/js/lucid.ruleset.js',
     __DIR__.'/../www/media/js/customizations.js', 
 );
 ?>
